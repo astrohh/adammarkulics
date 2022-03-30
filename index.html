@@ -9,12 +9,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=The+Nautigal">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap">
 </head>
 
 <body>
+
+<!--timer-->
+<div class="wrapper">
+  <div id="app"></div>
+  <input id="start" type="button" value="Start" onclick="startTimer();"/>
+</div>
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
@@ -27,20 +31,19 @@
       <li data-target="#carousel" data-slide-to="2"></li>
     </ol>
     <!--Carousel items-->
-    <div class="carousel-inner">
-
+    <div class="carousel-inner"> 
+     <!-- <div class="item active"></div>-->
       <div class="item active">
-        <img src="imgs/IMG_6081.jpg" alt="slide 1">
+        <img src="img/IMG_6081.jpg" alt="slide 1">
+      </div>
+      
+      <div class="item">
+        <img src="img/IMG_4915.jpg" alt="slide 2">
       </div>
       <div class="item">
-        <img src="imgs/IMG_4915.jpg" alt="slide 2">
+        <img src="img/IMG_1886.jpg" alt="slide 3">
       </div>
-      <div class="item">
-        <img src="imgs/IMG_1886.jpg" alt="slide 3">
-      </div>
-
     </div>
-
     <!--Controls-->
     <a href="#carousel" class="left carousel-control" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
@@ -50,40 +53,191 @@
     </a>
   </div>
 </div>
-
 <!-- Second Container -->
+
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">Background</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+  <h3 class="backgroundTitle">Background</h3>
+
+  <div class="backgroundLeft">
+    <div class="backgroundText1">
+      <div class="backgroundHeader"><h1>Where I'm From</h1></div>
+      <div class="backgroundBody1">
+        <div class="backgroundList">
+          <ul>
+            <li>Born in Hastings, MN</li>
+            <ul><li>Oldest of 3 children: younger brother Josh (23) and younger sister Maddie (21)</li></ul>
+            <li>Attended University of Duluth, MN</li>
+            <ul>
+              <li>Received a Bachelors in Marketing, Bachelors in Analytics</li>
+            </ul>
+          <li>Purchased a home last year and now live in Cottage Grove, MN with my girlfriend (Samantha), our dog (Hamilton) and our cat (Robb)</li>
+          <ul><li>Currently renovating the basement</li></ul>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="backgroundText2">
+      <div class="backgroundHeader"><h1>Things I like</h1></div>
+      <div class="backgroundBody1">
+      <div class="backgroundList">
+          <ul>
+          <li>(Primarily) Self taught programmer</li>
+            <ul><li>Currently learning Flask, HTML/CSS/JS (this site), and going deep on Machine Learning this year</li></ul>
+          <li>Cars</li>
+            <ul><li>I currently drive a 2019 Golf GTI (pic above) that I am regularly modding, but have a dream of owning a 1991 Nissan 180SX</li>
+              <li>Until then, I feed my love for driving/drifting/racing with a racing sim I'm constantly building upon (see basement renovation)</li>
+            </ul>
+          <li>All things computers</li>
+            <ul><li>I have a self built desktop that I play video games on, plus do all my personal programming.</li>
+              <li>I have a particular bane for mechanical keyboards and love building them (of which I have 4. 3 of those I built myself)</li>
+            </ul>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="backgroundRight">
+    <div class="backgroundText2">
+      <div class="backgroundBody2 box1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45350.6332782552!2d-92.89119123606312!3d44.73155807512716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f7c14c19f418a7%3A0xb116e6025142627e!2sHastings%2C%20MN%2055033!5e0!3m2!1sen!2sus!4v1641847752884!5m2!1sen!2sus&z=1" width="100%" height="100%" style="border:0; border-radius:1em;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="backgroundBody2 box2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21845.475143895797!2d-92.09177641301969!3d46.81052252845154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52afacd899102ea7%3A0xa026ef02b30c2f34!2sUniversity%20of%20Minnesota%20Duluth!5e0!3m2!1sen!2sus!4v1641875088026!5m2!1sen!2sus" width="100%" height="100%" style="border:0; border-radius:1em;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="backgroundBody2 box3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90557.94931868327!2d-92.94076477696474!3d44.82287016403325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f7d001bd0cdabf%3A0xafbfc7433e84312!2sCottage%20Grove%2C%20MN!5e0!3m2!1sen!2sus!4v1641875021999!5m2!1sen!2sus" width="100%" height="100%" style="border:0; border-radius:1em;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="backgroundText2">
+      <div class="box4">
+        <div class="subbox1">
+          <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" width="100%" style="vertical-align: middle;">
+        </div>
+        <div class="subbox2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" style="overflow:hidden; max-height: 100%; max-width: 100%">
+        </div>
+        <div class="subbox2">
+          <img src="https://static.scientificamerican.com/sciam/cache/file/B5EEA99B-9A70-44CC-B41AFC2EF100377A_source.jpg?w=590&h=800&B563C430-99B7-492D-A6716207E5344C2B" style="overflow:hidden; max-height: 100%; max-width: 100%">
+        </div>
+      </div>
+      <div class="backgroundBody2 box2">
+        <img src="https://cdn.dealeraccelerate.com/international/1/91/4218/1920x1440/1991-nissan-180sx" style="overflow:hidden; max-height: 100%; max-width: 100%">
+      </div>
+      <div class="backgroundBody2 box3">
+        <img src="img/IMG_5041.jpg" style="overflow:hidden; max-height: 100%; max-width: 100%">
+      </div>
+    </div>
+  </div>
 </div>
 
 <!--Third Container-->
 <div class="container-fluid bg-3 text-center">
-  <h3 class="margin">2022 Goals</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <div class="goalsTitle">2022 Goals</div>
+    <div class="flipCardContainer">
+      <div class="subContainers">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>#1</p>
+            </div>
+            <div class="flip-card-back">
+            <h1>Machine Learning</h1> 
+            <p>Learn the ins and outs of various machine learning techniques/methods.</p>
+            <p>Apply these various techniques in both a work and personal environment i.e. Build a machine learning algorithm to predict trailer fill or build a ML to create a daily playlist on Spotify based on recent listening habits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="subContainers after">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>#2</p>
+            </div>
+            <div class="flip-card-back">
+            <h1>Build a Portfolio</h1> 
+            <p>Create applets, Python scripts, Flask apps, or really any repeatable code tool and place it in a common space for others to view, utilize and tweak to their needs.</p> 
+            <p>This can be observed already in something like the Markets git repo.</p>
+            <p>Don't limit to only professional work. Do this on the personal side as well and post more to my personal Github.</p>
+            <p>Do more of this.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="subContainers after">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>#3</p>
+            </div>
+            <div class="flip-card-back">
+            <h1>Create a usable web interface</h1> 
+            <p>Design and implement a web interface (whether locally hosted on something like Flask or raw HTML/CSS/JS) and use it regularly.</p> 
+            <p>This could be something personal or professional.</p>
+            <p>It could be a UI for a trailer search function, or a webpage for videogame stats.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 </div>
 
 <!-- Fourth Container (Grid) -->
 <div class="container-fluid bg-4 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
+  <h3 class="progressTitle">Progress Update</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p><b><u>Machine Learning</u></b></p>
+      <p>Date: 02/16/22</p>
+      <ul style="text-align: left;">
+        <li>Completed DataCamp course on machine learning for timeseries</li>
+        <li>Applied and accepted to eCornell Python for Data Science certification program which includes a course on Machine Learning</li>
+        <li>Investing time in the Middle Mile Risk Model project to increase accuracy and efficacy in a Classification ML</li>
+      </ul>
+      <p>Date: 03/16/22</p>
+      <ul style="text-align: left;">
+        <li>A large portion of my time over the last four weeks has been spent working with the Middle Mile Risk Model, which is a model designed to predict loads that are at risk for defects. This time has lead to learning many different techniques, model types, and the scope of work needed when building a ML system. While this project is still in it's formulation, I believe the foundations in ML it has taught me will be applicable cross-project upon completion.</li>
+  
     </div>
     <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p><b><u>Portfolio Building</u></b></p>
+      <p>Date: 02/16/22</p>
+      <ul style="text-align: left;">
+        <li>Began work on thorough documentation on projects already hosted on Github</li>
+        <li>Copying code from current ADS workflows into Github, along with creating documentation</li>
+        <li><i>Starting</i> all future projects with a Github repo</li>
+        <li>Putting my own personal projects into a personal Github space</li>
+      </ul>
+      <p>Date: 03/16/22</p>
+      <ul style="text-align: left;">
+        <li>Diligently keeping all work around the MMRM hosted on Github, including different testing and learning notebooks.</li>
+        <li>Building small applets to help with remedial tasks and storing them in my personal DataMiner space and posting to Git as I see fit (or, my personal Github) Examples: Wordle Helper (still in development) and Automation Portal API calls.</li>
+
+
     </div>
     <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p><b><u>Create a usable Web Interface</u></b></p>
+      <p>Date: 02/16/22</p>
+      <ul style="text-align: left;">
+        <li>Identified subject matter and scope</li>
+        <li>Beginning work on design and code</li>
+      </ul>
+      <p>Date: 03/16/22</p>
+      <ul style="text-align: left;">
+        <li>Unfortunately, this work took a bit of a pause while my personal time was spent on some home renovations. I am, however, poking and prodding to find some additional data in the wild. Once find, code development can progress.</li>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="container-fluid bg-5 text-center">footer</footer>
+<footer class="container-fluid bg-5 text-center"><i>“A frog in a well knows nothing of the sea.”</i> - Japanese Proverb</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
 
 </body>
 </html>
